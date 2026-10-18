@@ -131,6 +131,9 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
 .section--dark { background: var(--teal-950); }
 .section--dark h2, .section--dark h3 { color: var(--white); }
 .section--dark p { color: rgba(250, 248, 242, 0.85); }
+.section--dark ul { color: rgba(250, 248, 242, 0.85); }
+.section--dark li { margin-bottom: 0.5em; }
+.section--dark li::marker { color: var(--gold-300); }
 
 /* ---- Header ---- */
 .announce {

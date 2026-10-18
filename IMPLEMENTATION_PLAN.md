@@ -91,13 +91,13 @@ At the top of `assets/js/main.js`, store unverified operational information in o
 
 ```js
 const hospital = {
-  phone: "",
-  whatsapp: "",
-  email: "",
-  address: "Akola, Maharashtra, India",
-  mapUrl: "",
-  timings: "",
-  emergencyPhone: ""
+	phone: "",
+	whatsapp: "",
+	email: "",
+	address: "Akola, Maharashtra, India",
+	mapUrl: "",
+	timings: "",
+	emergencyPhone: "",
 };
 ```
 
@@ -111,18 +111,18 @@ Define all colors as CSS custom properties:
 
 ```css
 :root {
-  --teal-950: #082f32;
-  --teal-900: #0b3d40;
-  --teal-700: #17666a;
-  --navy-950: #0b1830;
-  --gold-500: #b99657;
-  --gold-300: #d6bf91;
-  --ivory-50: #faf8f2;
-  --ivory-100: #f2eee4;
-  --white: #ffffff;
-  --charcoal: #202628;
-  --muted: #667274;
-  --line: rgba(11, 61, 64, 0.15);
+	--teal-950: #082f32;
+	--teal-900: #0b3d40;
+	--teal-700: #17666a;
+	--navy-950: #0b1830;
+	--gold-500: #b99657;
+	--gold-300: #d6bf91;
+	--ivory-50: #faf8f2;
+	--ivory-100: #f2eee4;
+	--white: #ffffff;
+	--charcoal: #202628;
+	--muted: #667274;
+	--line: rgba(11, 61, 64, 0.15);
 }
 ```
 

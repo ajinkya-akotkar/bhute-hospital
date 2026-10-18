@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; Appointments | Bhute Hospital Akola</title>
+  <meta name="description" content="Contact Bhute Hospital, Akola, Maharashtra: request appointments, find our location, and reach the right service.">
+  <meta property="og:title" content="Contact &amp; Appointments | Bhute Hospital Akola">
+  <meta property="og:description" content="Contact Bhute Hospital, Akola, Maharashtra: request appointments, find our location, and reach the right service.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <p class="announce">Bhute Hospital &middot; Akola, Maharashtra</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="./index.html">Bhute <span>Hospital</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="./spine.html">Spine</a></li>
+          <li><a href="./orthopaedics.html">Orthopaedics</a></li>
+          <li><a href="./trauma.html">Trauma</a></li>
+          <li><a href="./dental.html">Dental</a></li>
+          <li><a href="./doctors.html">Doctors</a></li>
+          <li><a href="./technology.html">Technology</a></li>
+          <li><a href="./patient-resources.html">Patient Resources</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>Menu</button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Menu">
+    <button class="mobile-nav__close" type="button" aria-label="Close menu">&#10005;</button>
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./spine.html">Endoscopic Spine</a></li>
+        <li><a href="./orthopaedics.html">Orthopaedics</a></li>
+        <li><a href="./trauma.html">Trauma &amp; Accident Care</a></li>
+        <li><a href="./dental.html">Dental Care</a></li>
+        <li><a href="./doctors.html">Our Doctors</a></li>
+        <li><a href="./technology.html">Technology</a></li>
+        <li><a href="./patient-resources.html">Patient Resources</a></li>
+        <li><a href="./contact.html" aria-current="page">Contact &amp; Appointments</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__footer">
+      <a data-action="call" class="btn btn--primary" href="#">Call the Hospital</a>
+      <a data-action="whatsapp" class="btn btn--ghost" href="#">Message on WhatsApp</a>
+      <a class="btn btn--ghost" href="./contact.html">Book an Appointment</a>
+    </div>  </div>
+
+  <main id="main">
+
+    <section class="page-banner">
+      <div class="container">
+        <p class="eyebrow">Get in Touch</p>
+        <h1>Contact &amp; Appointments</h1>
+        <p>Bhute Hospital is located in Akola, Maharashtra, India. Contact details are added here as they are verified; until then, visit the hospital or use the appointment request below.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Request an Appointment</h2>
+      <p class="lead reading">Send a request and our team will contact you to confirm. Please do not share sensitive medical information through this form.</p>
+      <form class="form" id="appointment-form" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="ap-name">Full name</label>
+            <input id="ap-name" name="name" type="text" autocomplete="name" required>
+            <p class="error">Please enter your name.</p>
+          </div>
+          <div class="field">
+            <label for="ap-phone">Mobile number</label>
+            <input id="ap-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+            <p class="error">Please enter a mobile number we can reach you on.</p>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="ap-speciality">Speciality</label>
+            <select id="ap-speciality" name="speciality" required>
+              <option value="">Select a speciality</option>
+              <option value="spine">Endoscopic Spine</option>
+              <option value="orthopaedics">Orthopaedics</option>
+              <option value="trauma">Trauma &amp; Accident Care</option>
+              <option value="dental">Dental Care</option>
+            </select>
+            <p class="error">Please select a speciality.</p>
+          </div>
+          <div class="field">
+            <label for="ap-date">Preferred date</label>
+            <input id="ap-date" name="date" type="date" required>
+            <p class="error">Please choose a preferred date.</p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="ap-message">Message (optional)</label>
+          <textarea id="ap-message" name="message"></textarea>
+        </div>
+        <p class="form__notice">Please do not share sensitive medical information through this form. Appointment requests are confirmed only after the hospital team contacts you.</p>
+        <p class="consent">
+          <input id="ap-consent" type="checkbox" required>
+          <label for="ap-consent">I agree to be contacted by Bhute Hospital about this appointment request, as described in the <a href="./privacy.html">privacy policy</a>.</label>
+        </p>
+        <p class="field"><button class="btn btn--primary" type="submit">Request Appointment</button></p>
+        <p class="form__notice" id="form-fallback" hidden>This form is not yet connected to a booking system. Until it is, please contact the hospital directly to book an appointment.</p>
+      </form>
+    </section>
+
+    <section class="section container section--tint">
+      <p class="eyebrow">Hospital Details</p>
+      <h2>Find Us</h2>
+      <ul class="contact-list">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c-5-4.5-8-8-8-11.5C4 6 7.5 3 12 3s8 3 8 6.5C20 13 17 16.5 12 21z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><strong>Address</strong> Akola, Maharashtra, India</div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div data-action="timings"><strong>Timings</strong> To be confirmed</div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-3 2a13 13 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"/></svg>
+          <div><strong>Phone</strong> <a data-action="call" href="#">To be confirmed</a></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+          <div><strong>Email</strong> <a data-action="email" href="#">To be confirmed</a></div>
+        </li>
+      </ul>
+      <p style="margin-top:20px"><a class="map-preview" data-action="map" href="#" style="display:none">View on Google Maps</a></p>
+      <p class="gallery__note">Contact details appear here as they are verified. We never display unverified information.</p>
+    </section>
+
+    <section class="section container">
+      <div class="reading">
+        <h2>Emergencies</h2>
+        <p>For emergencies, go to the nearest emergency department or call local emergency services. Please do not use the appointment form for emergencies.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="wordmark">Bhute <span>Hospital</span></p>
+          <p>Specialist spine, orthopaedic, trauma and dental care in Akola, Maharashtra.</p>
+        </div>
+        <div>
+          <h2>Specialities</h2>
+          <ul class="footer-links">
+            <li><a href="./spine.html">Endoscopic Spine</a></li>
+            <li><a href="./orthopaedics.html">Orthopaedics</a></li>
+            <li><a href="./trauma.html">Trauma &amp; Accident Care</a></li>
+            <li><a href="./dental.html">Dental Care</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Hospital</h2>
+          <ul class="footer-links">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./doctors.html">Our Doctors</a></li>
+            <li><a href="./patient-resources.html">Patient Resources</a></li>
+            <li><a href="./contact.html" aria-current="page">Contact &amp; Appointments</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Bhute Hospital, Akola. All rights reserved.</p>
+        <p>
+          <a href="./privacy.html">Privacy</a> &middot;
+          <a href="./terms.html">Terms</a> &middot;
+          <a href="./medical-disclaimer.html">Medical Disclaimer</a>
+        </p>
+      </div>
+      <p class="footer-disclaimer">Website information is for general education and does not replace an individual medical consultation. Treatment recommendations vary according to clinical assessment.</p>
+    </div>
+  </footer>
+
+  <nav class="action-bar" aria-label="Quick actions">
+    <a data-action="call" href="#" aria-label="Call Bhute Hospital"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-3 2a13 13 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"/></svg>Call</a>
+    <a data-action="whatsapp" href="#" aria-label="WhatsApp Bhute Hospital"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 00-7.8 13.6L3 21l4.5-1.2A9 9 0 1012 3z"/><path d="M8.6 9.4c.4 2.6 2.8 4.9 5.4 5.3l.8-1.7 2 .8"/></svg>WhatsApp</a>
+  </nav>
+
+  <script src="./assets/js/main.js" defer></script>
+</body>
+</html>
+

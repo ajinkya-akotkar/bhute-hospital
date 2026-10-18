@@ -1,0 +1,16 @@
+{
+  "name": "Bhute Hospital, Akola",
+  "short_name": "Bhute Hospital",
+  "description": "Endoscopic spine, orthopaedic, trauma and dental care in Akola, Maharashtra.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#faf8f2",
+  "theme_color": "#082f32",
+  "icons": [
+    {
+      "src": "./assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

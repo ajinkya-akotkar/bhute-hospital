@@ -1,0 +1,7 @@
+# Bhute Hospital, Akola
+# Production domain is not yet confirmed; robots and sitemap will be
+# finalized when the live domain is known.
+
+User-agent: *
+Allow: /
+Disallow: /404.html

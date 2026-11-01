@@ -5,20 +5,20 @@
 
 /* ---- Tokens ---- */
 :root {
-  --teal-950: #082f32;
-  --teal-900: #0b3d40;
-  --teal-700: #17666a;
-  --navy-950: #0b1830;
-  --gold-500: #b99657;
-  --gold-300: #d6bf91;
-  --gold-700: #8f6b28;   /* darkened gold for text on light backgrounds (AA) */
-  --ivory-50: #faf8f2;
-  --ivory-100: #f2eee4;
+  --teal-950: #123B66;   /* primary navy: dark sections, headings */
+  --teal-900: #2563A6;   /* primary blue: buttons */
+  --teal-700: #2563A6;   /* primary blue: links */
+  --navy-950: #123B66;   /* primary navy: footer */
+  --gold-500: #2563A6;   /* blue accent (was gold) */
+  --gold-300: #EAF3FB;   /* light blue on dark backgrounds (was light gold) */
+  --gold-700: #2563A6;   /* blue for small labels on light backgrounds */
+  --ivory-50: #ffffff;   /* main page background */
+  --ivory-100: #EAF3FB;  /* alternate section background */
   --white: #ffffff;
-  --charcoal: #202628;
-  --muted: #4d585a;
-  --line: rgba(11, 61, 64, 0.15);
-  --line-strong: rgba(11, 61, 64, 0.22);
+  --charcoal: #334155;   /* main text */
+  --muted: #64748B;      /* secondary text */
+  --line: #DCE6F0;       /* borders */
+  --line-strong: #C3D3E3;
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Manrope", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -120,18 +120,12 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
 .reading { max-width: var(--reading); }
 
 .section { padding-block: var(--section-space); }
-.section + .section { padding-top: 0; }
-
-/* Tinted/dark sections always keep top padding so their headings
-   do not sit flush against the background's upper edge. */
-.section--tint,
-.section--dark { padding-top: calc(var(--section-space) * 0.85); }
 
 .section--tint { background: var(--ivory-100); }
 .section--dark { background: var(--teal-950); }
 .section--dark h2, .section--dark h3 { color: var(--white); }
-.section--dark p { color: rgba(250, 248, 242, 0.85); }
-.section--dark ul { color: rgba(250, 248, 242, 0.85); }
+.section--dark p { color: rgba(255, 255, 255, 0.85); }
+.section--dark ul { color: rgba(255, 255, 255, 0.85); }
 .section--dark li { margin-bottom: 0.5em; }
 .section--dark li::marker { color: var(--gold-300); }
 
@@ -149,7 +143,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 248, 242, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(8px);
 }
@@ -265,7 +259,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   min-width: 44px;
   min-height: 44px;
   background: none;
-  border: 1px solid rgba(250, 248, 242, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius);
   color: var(--white);
   font-size: 1.1rem;
@@ -285,7 +279,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   font-weight: 600;
   color: var(--ivory-50);
   text-decoration: none;
-  border-bottom: 1px solid rgba(250, 248, 242, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 .mobile-nav__list a:hover,
 .mobile-nav__list a[aria-current="page"] { color: var(--gold-300); }
@@ -298,7 +292,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
 }
 .mobile-nav__footer .btn { width: 100%; }
 .mobile-nav .btn--primary {
-  background: var(--gold-500);
+  background: var(--white);
   color: var(--teal-950);
 }
 .mobile-nav .btn--primary:hover { background: var(--gold-300); }
@@ -331,11 +325,11 @@ body.nav-locked { overflow: hidden; }
 }
 .btn--primary:hover { background: var(--teal-700); }
 
-/* On dark backgrounds the primary CTA uses the gold accent for contrast */
+/* On dark backgrounds the primary CTA inverts: white/light-blue with navy text */
 .hero .btn--primary,
 .section--dark .btn--primary,
 .page-banner .btn--primary {
-  background: var(--gold-500);
+  background: var(--white);
   color: var(--teal-950);
 }
 .hero .btn--primary:hover,
@@ -352,11 +346,11 @@ body.nav-locked { overflow: hidden; }
 .btn--secondary:hover { background: var(--teal-900); color: var(--white); }
 
 .btn--ghost {
-  background: rgba(250, 248, 242, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--white);
-  border-color: rgba(250, 248, 242, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
 }
-.btn--ghost:hover { background: rgba(250, 248, 242, 0.22); }
+.btn--ghost:hover { background: rgba(255, 255, 255, 0.22); }
 
 .text-link {
   font-weight: 700;
@@ -408,7 +402,7 @@ body.nav-locked { overflow: hidden; }
   max-width: 640px;
 }
 .hero h1 { color: var(--white); }
-.hero .hero__sub { color: rgba(250, 248, 242, 0.9); font-size: 1.05rem; }
+.hero .hero__sub { color: rgba(255, 255, 255, 0.9); font-size: 1.05rem; }
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
@@ -443,7 +437,7 @@ body.nav-locked { overflow: hidden; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-300);
-  border: 1px solid rgba(214, 191, 145, 0.45);
+  border: 1px solid rgba(234, 243, 251, 0.45);
   border-radius: 999px;
 }
 
@@ -452,13 +446,13 @@ body.nav-locked { overflow: hidden; }
   display: grid;
   gap: 10px 24px;
   padding-top: 22px;
-  border-top: 1px solid rgba(250, 248, 242, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.85rem;
 }
 @media (min-width: 768px) {
-  .hero__trust { grid-template-columns: repeat(3, 1fr); }
+  .hero__trust { grid-template-columns: repeat(2, 1fr); }
 }
-.hero__trust div { color: rgba(250, 248, 242, 0.8); }
+.hero__trust div { color: rgba(255, 255, 255, 0.8); }
 .hero__trust strong { display: block; color: var(--white); }
 
 @media (min-width: 1024px) {
@@ -488,7 +482,7 @@ body.nav-locked { overflow: hidden; }
 .spec-card:hover {
   border-color: var(--teal-700);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(8, 47, 50, 0.07);
+  box-shadow: 0 10px 25px rgba(18, 59, 102, 0.08);
 }
 .spec-card__num {
   font-family: var(--font-display);
@@ -534,10 +528,10 @@ body.nav-locked { overflow: hidden; }
 }
 .spec-card--wide h3,
 .spec-card--wide .text-link { color: var(--white); }
-.spec-card--wide p { color: rgba(250, 248, 242, 0.8); }
+.spec-card--wide p { color: rgba(255, 255, 255, 0.8); }
 .spec-card--wide .text-link { color: var(--gold-300); }
 .spec-card--wide .spec-card__num { color: var(--gold-300); }
-.spec-card--wide .spec-card__head .spec-card__num { color: rgba(250, 248, 242, 0.6); }
+.spec-card--wide .spec-card__head .spec-card__num { color: rgba(255, 255, 255, 0.6); }
 .spec-card--wide .spec-card__icon { stroke: var(--gold-300); }
 
 .spec-card__badge {
@@ -607,7 +601,7 @@ body.nav-locked { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid rgba(214, 191, 145, 0.5);
+  border: 1.5px solid rgba(234, 243, 251, 0.5);
   border-radius: 50%;
 }
 
@@ -617,6 +611,14 @@ body.nav-locked { overflow: hidden; }
   color: var(--gold-700);
   font-weight: 700;
   text-transform: uppercase;
+}
+
+/* Smaller secondary line directly beneath a doctor's qualifications */
+.credentials-sub {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--teal-700);
+  margin: -0.6em 0 1.2em;
 }
 
 /* Expertise as pill tags */
@@ -661,7 +663,7 @@ body.nav-locked { overflow: hidden; }
 .media-card:hover {
   border-color: var(--teal-700);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(8, 47, 50, 0.07);
+  box-shadow: 0 10px 25px rgba(18, 59, 102, 0.08);
 }
 .media-card__image {
   aspect-ratio: 3 / 2;
@@ -681,7 +683,7 @@ body.nav-locked { overflow: hidden; }
   position: absolute;
   inset: 0;
   background:
-      radial-gradient(rgba(214, 191, 145, 0.14) 1px, transparent 1.5px) 0 0 / 26px 26px,
+      radial-gradient(rgba(234, 243, 251, 0.14) 1px, transparent 1.5px) 0 0 / 26px 26px,
       linear-gradient(160deg, var(--teal-900), var(--teal-950));
 }
 .media-card__body { padding: 22px 22px 26px; }
@@ -824,7 +826,7 @@ body.nav-locked { overflow: hidden; }
 .edu-card:hover {
   border-color: var(--teal-700);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(8, 47, 50, 0.07);
+  box-shadow: 0 10px 25px rgba(18, 59, 102, 0.08);
 }
 .edu-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .edu-card p { font-size: 0.9rem; color: var(--muted); margin: 0; }
@@ -967,12 +969,12 @@ body.nav-locked { overflow: hidden; }
 }
 .page-banner h1 { color: var(--white); }
 .page-banner .eyebrow { margin-bottom: 22px; }
-.page-banner p { color: rgba(250, 248, 242, 0.85); max-width: var(--reading); margin-top: 1em; }
+.page-banner p { color: rgba(255, 255, 255, 0.85); max-width: var(--reading); margin-top: 1em; }
 
 /* ---- Footer ---- */
 .site-footer {
   background: var(--navy-950);
-  color: rgba(250, 248, 242, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   padding-block: 56px 28px;
 }
 .footer-grid {
@@ -995,12 +997,12 @@ body.nav-locked { overflow: hidden; }
   gap: 8px;
   font-size: 0.9rem;
 }
-.footer-links a { color: rgba(250, 248, 242, 0.75); text-decoration: none; }
+.footer-links a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
 .footer-links a:hover { color: var(--gold-300); }
 .footer-bottom {
   margin-top: 48px;
   padding-top: 22px;
-  border-top: 1px solid rgba(250, 248, 242, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.8rem;
   display: flex;
   flex-wrap: wrap;
@@ -1010,7 +1012,7 @@ body.nav-locked { overflow: hidden; }
 .footer-disclaimer {
   margin-top: 18px;
   font-size: 0.8rem;
-  color: rgba(250, 248, 242, 0.55);
+  color: rgba(255, 255, 255, 0.55);
   max-width: 680px;
 }
 

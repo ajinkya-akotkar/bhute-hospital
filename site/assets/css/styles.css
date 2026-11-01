@@ -614,6 +614,17 @@ body.nav-locked { overflow: hidden; }
   color: var(--accent-700);
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0.4em;
+}
+
+/* Formal degrees beneath the profile description line */
+.credentials-detail {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.1em;
 }
 
 /* Clinical specialty line directly beneath the formal qualifications */

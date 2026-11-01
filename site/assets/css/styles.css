@@ -616,25 +616,12 @@ body.nav-locked { overflow: hidden; }
   text-transform: uppercase;
 }
 
-/* Secondary clinical-focus block beneath a doctor's formal qualifications */
-.clinical-focus {
-  margin: -0.4em 0 1.3em;
-  padding-left: 12px;
-  border-left: 2px solid var(--line-strong);
-}
-.clinical-focus__label {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent-700);
-  margin-bottom: 2px;
-}
-.clinical-focus p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin: 0;
+/* Clinical specialty line directly beneath the formal qualifications */
+.specialty-line {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--teal-700);
+  margin: -0.55em 0 1.25em;
   overflow-wrap: break-word;
 }
 
@@ -1006,9 +993,9 @@ body.nav-locked { overflow: hidden; }
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
-/* Footer-specific wordmark: BHUTE white, HOSPITAL light blue */
-.site-footer .wordmark { color: var(--white); }
-.site-footer .wordmark span { color: var(--footer-accent); }
+/* Footer-specific wordmark: single-colour white */
+.site-footer .wordmark,
+.site-footer .wordmark span { color: #FFFFFF; }
 .footer-links {
   list-style: none;
   padding: 0;

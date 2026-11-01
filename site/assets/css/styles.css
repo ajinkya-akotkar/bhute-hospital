@@ -1,24 +1,27 @@
-/* ==========================================================================
-   Bhute Hospital — shared styles
+﻿/* ==========================================================================
+   Bhute Hospital â€” shared styles
    Mobile-first. Design tokens per IMPLEMENTATION_PLAN.md section 6.
    ========================================================================== */
 
 /* ---- Tokens ---- */
 :root {
   --teal-950: #123B66;   /* primary navy: dark sections, headings */
-  --teal-900: #2563A6;   /* primary blue: buttons */
-  --teal-700: #2563A6;   /* primary blue: links */
+  --teal-900: #2774AE;   /* primary blue: buttons */
+  --teal-700: #2774AE;   /* primary blue: links */
   --navy-950: #123B66;   /* primary navy: footer */
-  --gold-500: #2563A6;   /* blue accent (was gold) */
-  --gold-300: #EAF3FB;   /* light blue on dark backgrounds (was light gold) */
-  --gold-700: #2563A6;   /* blue for small labels on light backgrounds */
+  --accent-500: #2774AE; /* primary blue accent (small highlights) */
+  --accent-300: #EAF3FB; /* light blue on dark backgrounds */
+  --accent-700: #1d5a91; /* darker blue for small labels on light backgrounds (AA) */
+  --accent-badge: #EAF3FB;
   --ivory-50: #ffffff;   /* main page background */
-  --ivory-100: #EAF3FB;  /* alternate section background */
+  --ivory-100: #EAF3FB;  /* light-blue alternate section background */
+  --neutral-soft: #F6F4EE; /* soft neutral background, used sparingly */
   --white: #ffffff;
   --charcoal: #334155;   /* main text */
-  --muted: #64748B;      /* secondary text */
+  --muted: #5c6b7d;      /* secondary text (AA on white and light blue) */
   --line: #DCE6F0;       /* borders */
   --line-strong: #C3D3E3;
+  --footer-accent: #D8E9F7; /* footer logo accent + legal links */
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Manrope", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -78,7 +81,7 @@ a:hover { color: var(--teal-900); }
 ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
 
 :focus-visible {
-  outline: 2px solid var(--gold-500);
+  outline: 2px solid var(--accent-500);
   outline-offset: 3px;
 }
 
@@ -127,12 +130,12 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
 .section--dark p { color: rgba(255, 255, 255, 0.85); }
 .section--dark ul { color: rgba(255, 255, 255, 0.85); }
 .section--dark li { margin-bottom: 0.5em; }
-.section--dark li::marker { color: var(--gold-300); }
+.section--dark li::marker { color: var(--accent-300); }
 
 /* ---- Header ---- */
 .announce {
   background: var(--teal-950);
-  color: var(--gold-300);
+  color: var(--accent-300);
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-align: center;
@@ -165,7 +168,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   text-decoration: none;
   text-transform: uppercase;
 }
-.wordmark span { color: var(--gold-500); }
+.wordmark span { color: var(--accent-500); }
 
 /* Desktop nav */
 .nav-list { display: none; }
@@ -282,7 +285,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 .mobile-nav__list a:hover,
-.mobile-nav__list a[aria-current="page"] { color: var(--gold-300); }
+.mobile-nav__list a[aria-current="page"] { color: var(--accent-300); }
 
 /* Drawer quick actions (call/whatsapp/book) */
 .mobile-nav__footer {
@@ -295,7 +298,7 @@ ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
   background: var(--white);
   color: var(--teal-950);
 }
-.mobile-nav .btn--primary:hover { background: var(--gold-300); }
+.mobile-nav .btn--primary:hover { background: var(--accent-300); }
 
 body.nav-locked { overflow: hidden; }
 
@@ -335,7 +338,7 @@ body.nav-locked { overflow: hidden; }
 .hero .btn--primary:hover,
 .section--dark .btn--primary:hover,
 .page-banner .btn--primary:hover {
-  background: var(--gold-300);
+  background: var(--accent-300);
 }
 
 .btn--secondary {
@@ -359,7 +362,7 @@ body.nav-locked { overflow: hidden; }
   text-underline-offset: 4px;
   transition: text-decoration-color var(--transition), color var(--transition);
 }
-.text-link:hover { text-decoration-color: var(--gold-500); }
+.text-link:hover { text-decoration-color: var(--accent-500); }
 
 /* ---- Section head pattern ---- */
 .eyebrow {
@@ -368,11 +371,11 @@ body.nav-locked { overflow: hidden; }
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-700);
+  color: var(--accent-700);
   margin-bottom: 22px;
 }
 .section--dark .eyebrow,
-.page-banner .eyebrow { color: var(--gold-300); }
+.page-banner .eyebrow { color: var(--accent-300); }
 
 .lead {
   font-size: 1.08rem;
@@ -418,7 +421,7 @@ body.nav-locked { overflow: hidden; }
   flex-wrap: wrap;
   gap: 8px 28px;
   font-size: 0.88rem;
-  color: var(--gold-300);
+  color: var(--accent-300);
 }
 .hero__meta strong { color: var(--white); font-weight: 600; }
 .hero__meta .hero__place {
@@ -436,7 +439,7 @@ body.nav-locked { overflow: hidden; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-300);
+  color: var(--accent-300);
   border: 1px solid rgba(234, 243, 251, 0.45);
   border-radius: 999px;
 }
@@ -487,12 +490,12 @@ body.nav-locked { overflow: hidden; }
 .spec-card__num {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  color: var(--gold-700);
+  color: var(--accent-700);
 }
 .spec-card__icon {
   width: 34px;
   height: 34px;
-  stroke: var(--gold-700);
+  stroke: var(--accent-700);
   stroke-width: 1.5;
   fill: none;
   margin-bottom: 4px;
@@ -529,10 +532,10 @@ body.nav-locked { overflow: hidden; }
 .spec-card--wide h3,
 .spec-card--wide .text-link { color: var(--white); }
 .spec-card--wide p { color: rgba(255, 255, 255, 0.8); }
-.spec-card--wide .text-link { color: var(--gold-300); }
-.spec-card--wide .spec-card__num { color: var(--gold-300); }
+.spec-card--wide .text-link { color: var(--accent-300); }
+.spec-card--wide .spec-card__num { color: var(--accent-300); }
 .spec-card--wide .spec-card__head .spec-card__num { color: rgba(255, 255, 255, 0.6); }
-.spec-card--wide .spec-card__icon { stroke: var(--gold-300); }
+.spec-card--wide .spec-card__icon { stroke: var(--accent-300); }
 
 .spec-card__badge {
   align-self: flex-start;
@@ -542,7 +545,7 @@ body.nav-locked { overflow: hidden; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--teal-950);
-  background: var(--gold-300);
+  background: var(--accent-300);
   border-radius: 999px;
 }
 
@@ -595,7 +598,7 @@ body.nav-locked { overflow: hidden; }
   font-family: var(--font-display);
   font-size: 4.5rem;
   font-weight: 600;
-  color: var(--gold-300);
+  color: var(--accent-300);
   width: 120px;
   height: 120px;
   display: flex;
@@ -608,17 +611,31 @@ body.nav-locked { overflow: hidden; }
 .credentials {
   font-size: 0.88rem;
   letter-spacing: 0.04em;
-  color: var(--gold-700);
+  color: var(--accent-700);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/* Smaller secondary line directly beneath a doctor's qualifications */
-.credentials-sub {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--teal-700);
-  margin: -0.6em 0 1.2em;
+/* Secondary clinical-focus block beneath a doctor's formal qualifications */
+.clinical-focus {
+  margin: -0.4em 0 1.3em;
+  padding-left: 12px;
+  border-left: 2px solid var(--line-strong);
+}
+.clinical-focus__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+  margin-bottom: 2px;
+}
+.clinical-focus p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
 /* Expertise as pill tags */
@@ -708,7 +725,7 @@ body.nav-locked { overflow: hidden; }
   flex: none;
   width: 26px;
   height: 26px;
-  stroke: var(--gold-700);
+  stroke: var(--accent-700);
   stroke-width: 1.6;
   fill: none;
 }
@@ -734,7 +751,7 @@ body.nav-locked { overflow: hidden; }
   content: "0" counter(step);
   font-family: var(--font-display);
   font-size: 2rem;
-  color: var(--gold-700);
+  color: var(--accent-700);
   display: block;
   margin-bottom: 8px;
 }
@@ -774,7 +791,7 @@ body.nav-locked { overflow: hidden; }
   justify-content: center;
   border: 1px solid var(--line-strong);
   border-radius: 50%;
-  color: var(--gold-700);
+  color: var(--accent-700);
   transition: transform var(--transition);
 }
 .accordion__icon svg {
@@ -897,7 +914,7 @@ body.nav-locked { overflow: hidden; }
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  outline: 2px solid var(--gold-500);
+  outline: 2px solid var(--accent-500);
   outline-offset: 1px;
 }
 .field .error {
@@ -914,7 +931,7 @@ body.nav-locked { overflow: hidden; }
 .form__notice {
   padding: 14px 18px;
   background: var(--ivory-100);
-  border-left: 3px solid var(--gold-500);
+  border-left: 3px solid var(--accent-500);
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -940,7 +957,7 @@ body.nav-locked { overflow: hidden; }
 .contact-list svg {
   flex: none;
   width: 22px; height: 22px;
-  stroke: var(--gold-700);
+  stroke: var(--accent-700);
   stroke-width: 1.6;
   fill: none;
   margin-top: 2px;
@@ -974,7 +991,7 @@ body.nav-locked { overflow: hidden; }
 /* ---- Footer ---- */
 .site-footer {
   background: var(--navy-950);
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.82);
   padding-block: 56px 28px;
 }
 .footer-grid {
@@ -989,7 +1006,9 @@ body.nav-locked { overflow: hidden; }
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
+/* Footer-specific wordmark: BHUTE white, HOSPITAL light blue */
 .site-footer .wordmark { color: var(--white); }
+.site-footer .wordmark span { color: var(--footer-accent); }
 .footer-links {
   list-style: none;
   padding: 0;
@@ -997,8 +1016,8 @@ body.nav-locked { overflow: hidden; }
   gap: 8px;
   font-size: 0.9rem;
 }
-.footer-links a { color: rgba(255, 255, 255, 0.75); text-decoration: none; }
-.footer-links a:hover { color: var(--gold-300); }
+.footer-links a { color: var(--footer-accent); text-decoration: none; }
+.footer-links a:hover { color: var(--white); }
 .footer-bottom {
   margin-top: 48px;
   padding-top: 22px;
@@ -1009,10 +1028,12 @@ body.nav-locked { overflow: hidden; }
   gap: 10px 24px;
   justify-content: space-between;
 }
+.footer-bottom a { color: var(--footer-accent); }
+.footer-bottom a:hover { color: var(--white); }
 .footer-disclaimer {
   margin-top: 18px;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.72);
   max-width: 680px;
 }
 

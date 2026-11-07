@@ -953,13 +953,15 @@ body.nav-locked { overflow: hidden; }
 .contact-list strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
 /* ---- Embedded map (contact page) ---- */
 .map-embed {
+  width: 100%;
   max-width: 100%;
   margin-top: 20px;
 }
 .map-embed iframe {
   display: block;
   width: 100%;
-  height: clamp(240px, 45vw, 380px);
+  max-width: 100%;
+  height: clamp(280px, 45vw, 400px);
   border: 0;
   border-radius: var(--radius);
 }
@@ -967,7 +969,7 @@ body.nav-locked { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 /* ---- Page banner (inner pages) ---- */

@@ -3,11 +3,11 @@
 /* Central configuration for unverified operational information.
    Empty values hide the related actions. Do not insert fake values. */
 const hospital = {
-  phone: "",
-  whatsapp: "",
-  email: "",
-  address: "Akola, Maharashtra, India",
-  mapUrl: "",
+  phone: "+918530221888",
+  whatsapp: "918530221888",
+  email: "bhutehospital@gmail.com",
+  address: "LRT College Road, Opposite LRT College, Patrakar Colony, Akola, Maharashtra 444001",
+  mapUrl: "https://maps.app.goo.gl/Eby62yveQnF68TuP9",
   timings: "",
   emergencyPhone: ""
 };

@@ -951,20 +951,24 @@ body.nav-locked { overflow: hidden; }
   margin-top: 2px;
 }
 .contact-list strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
-.map-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 16 / 9;
-  background: var(--teal-950);
-  border-radius: var(--radius);
-  color: var(--white);
-  text-decoration: none;
-  text-align: center;
-  padding: 24px;
-  font-weight: 700;
+/* ---- Embedded map (contact page) ---- */
+.map-embed {
+  max-width: 100%;
+  margin-top: 20px;
 }
-.map-preview:hover { background: var(--teal-900); }
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 45vw, 380px);
+  border: 0;
+  border-radius: var(--radius);
+}
+.map-embed__directions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
 
 /* ---- Page banner (inner pages) ---- */
 .page-banner {

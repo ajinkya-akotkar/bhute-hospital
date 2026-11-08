@@ -167,11 +167,10 @@ const hospital = {
     window.addEventListener("load", handleMissingImages);
   }
 
-  /* ---- Appointment form ---- */
+  /* ---- Appointment form (WhatsApp primary, email alternative; no backend) ---- */
   var form = doc.getElementById("appointment-form");
   if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+    function validateAppointment() {
       var invalid = [];
       var fields = form.querySelectorAll("[required]");
       for (var f = 0; f < fields.length; f++) {
@@ -183,27 +182,59 @@ const hospital = {
       }
       if (invalid.length) {
         invalid[0].focus();
+        return false;
+      }
+      return true;
+    }
+
+    function appointmentMessage() {
+      var speciality = form.elements.speciality;
+      var lines = [
+        "Hello Bhute Hospital,",
+        "",
+        "I would like to request an appointment.",
+        "",
+        "Patient Name: " + form.elements.name.value.trim(),
+        "Mobile Number: " + form.elements.phone.value.trim(),
+        "Preferred Speciality: " + speciality.options[speciality.selectedIndex].text,
+        "Preferred Date: " + form.elements.date.value
+      ];
+      var note = form.elements.message.value.trim();
+      if (note) {
+        lines.push("", "Additional Note: " + note);
+      }
+      lines.push("", "Please contact me to confirm appointment availability.");
+      return lines.join("\n");
+    }
+
+    /* WhatsApp submission: opens a prefilled chat; the patient reviews the
+       message and presses Send. Nothing is stored or transmitted elsewhere. */
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!validateAppointment()) return;
+      if (!hospital.whatsapp) {
+        var fallback = doc.getElementById("form-fallback");
+        if (fallback) fallback.removeAttribute("hidden");
+        form.querySelector("button[type='submit']").disabled = true;
         return;
       }
-      /* No backend endpoint is approved yet. If a verified WhatsApp number
-         exists in config, submit builds a prefilled WhatsApp message so the
-         request still reaches the hospital. Otherwise show a clear
-         alternative instead of pretending the request was sent. */
-      if (hospital.whatsapp) {
-        var name = form.elements.name.value.trim();
-        var speciality = form.elements.speciality;
-        var specialityText = speciality.options[speciality.selectedIndex].text;
-        var date = form.elements.date.value;
-        var message = "Hello Bhute Hospital, I would like to request an appointment."
-          + " Name: " + name
-          + ", Speciality: " + specialityText
-          + ", Preferred date: " + date + ".";
-        window.open("https://wa.me/" + hospital.whatsapp + "?text=" + encodeURIComponent(message), "_blank");
-        return;
-      }
-      var fallback = doc.getElementById("form-fallback");
-      if (fallback) fallback.removeAttribute("hidden");
-      form.querySelector("button[type='submit']").disabled = true;
+      var url = "https://wa.me/" + hospital.whatsapp + "?text=" + encodeURIComponent(appointmentMessage());
+      var opened = window.open(url, "_blank");
+      if (!opened) window.location.href = url;
     });
+
+    /* Email alternative: same details prefilled into the patient's mail app;
+       the patient still has to press Send there. */
+    var emailBtn = doc.getElementById("appointment-email");
+    if (emailBtn) {
+      emailBtn.addEventListener("click", function () {
+        if (!validateAppointment()) return;
+        var subject = "Appointment Request – Bhute Hospital";
+        var href = "mailto:" + hospital.email
+          + "?subject=" + encodeURIComponent(subject)
+          + "&body=" + encodeURIComponent(appointmentMessage());
+        window.location.href = href;
+      });
+    }
   }
 })();

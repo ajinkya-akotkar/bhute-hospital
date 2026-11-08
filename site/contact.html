@@ -18,7 +18,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <p class="announce">Bhute Hospital &middot; Akola, Maharashtra</p>
   <header class="site-header">
     <div class="container header-inner">
       <a class="wordmark" href="./index.html">Bhute <span>Hospital</span></a>
@@ -107,13 +106,14 @@
           <label for="ap-message">Message (optional)</label>
           <textarea id="ap-message" name="message"></textarea>
         </div>
-        <p class="form__notice">Please do not share sensitive medical information through this form. Appointment requests are confirmed only after the hospital team contacts you.</p>
+        <p class="form__notice">Your appointment request will open in WhatsApp. Please review your details and press Send. Prefer email? Choose "Request via Email" — you will still need to press Send in your email application.</p>
         <p class="consent">
           <input id="ap-consent" type="checkbox" required>
           <label for="ap-consent">I agree to be contacted by Bhute Hospital about this appointment request, as described in the <a href="./privacy.html">privacy policy</a>.</label>
         </p>
-        <p class="field"><button class="btn btn--primary" type="submit">Request Appointment</button></p>
-        <p class="form__notice" id="form-fallback" hidden>This form is not yet connected to a booking system. Until it is, please contact the hospital directly to book an appointment.</p>
+        <p class="field form__actions"><button class="btn btn--primary" type="submit">Request Appointment</button> <button class="btn btn--ghost" type="button" id="appointment-email">Request via Email</button></p>
+        <p class="form__notice">Submitting an appointment request does not confirm your appointment. Our hospital team will contact you to confirm availability.</p>
+        <p class="form__notice" id="form-fallback" hidden>Appointment requests are unavailable right now. Please contact the hospital directly to book an appointment.</p>
       </form>
     </section>
 

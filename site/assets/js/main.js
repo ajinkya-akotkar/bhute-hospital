@@ -131,7 +131,7 @@ const hospital = {
     for (var m = 0; m < imgs.length; m++) {
       (function (img) {
         function markMissing() {
-          var parent = img.closest(".portrait, .media-card__image, .gallery__item");
+          var parent = img.closest(".portrait, .media-card__image, .gallery__item, .gallery-cell");
           if (parent) {
             parent.classList.add("is-missing");
           }
@@ -143,21 +143,6 @@ const hospital = {
           img.addEventListener("error", markMissing);
         }
       })(imgs[m]);
-    }
-
-    /* If every gallery photo is missing, replace the grid with a notice */
-    var gallery = doc.querySelector(".gallery");
-    if (gallery) {
-      var items = gallery.querySelectorAll(".gallery__item");
-      var missing = 0;
-      for (var g = 0; g < items.length; g++) {
-        if (items[g].classList.contains("is-missing")) missing++;
-      }
-      if (items.length > 0 && missing === items.length) {
-        gallery.style.display = "none";
-        var empty = doc.querySelector(".gallery__empty");
-        if (empty) empty.removeAttribute("hidden");
-      }
     }
   }
 

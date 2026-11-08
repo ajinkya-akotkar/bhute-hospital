@@ -143,26 +143,18 @@
 							careful, personal attention.
 						</p>
 						<div class="hero__ctas">
+							<a class="hero-call-card" href="tel:+918530221888" data-action="call">
+								<svg viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M5 4h4l2 5-3 2a13 13 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z" />
+								</svg>
+								<span class="hero-call-card__text">
+									<span class="hero-call-card__label">Call Bhute Hospital</span>
+									<span class="hero-call-card__number">+91 85302 21888</span>
+									<span class="hero-call-card__hint">Tap to call</span>
+								</span>
+							</a>
 							<a class="btn btn--primary" href="#appointment"
 								>Book an Appointment</a
-							>
-							<a
-								class="btn btn--ghost"
-								href="tel:+918530221888"
-								data-action="call"
-								><svg
-									viewBox="0 0 24 24"
-									width="16"
-									height="16"
-									aria-hidden="true"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M5 4h4l2 5-3 2a13 13 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z"
-									/></svg
-								>Call Now</a
 							>
 							<a class="btn btn--ghost" href="#specialities"
 								>Explore Our Specialities</a
@@ -198,7 +190,7 @@
 					</div>
 					<a
 						class="btn btn--secondary"
-						href="https://share.google/0q8h4Y59gsfBDh61X"
+						href="https://maps.app.goo.gl/Eby62yveQnF68TuP9"
 						target="_blank"
 						rel="noopener"
 						>Get Directions</a
@@ -307,6 +299,17 @@
 						<span class="text-link">Explore dental care</span>
 					</a>
 				</div>
+			</section>
+
+			<!-- 8.3b Photo showcase -->
+			<section class="section container gallery-section">
+				<p class="eyebrow">Gallery</p>
+				<h2>Real People. Real Expertise.</h2>
+				<p class="lead reading">
+					A glimpse into our professional activities, clinical practice and
+					commitment to patient care.
+				</p>
+				<div class="showcase reveal" id="gallery-showcase"></div>
 			</section>
 
 			<!-- 8.4 Dr. Abhinav Bhute -->
@@ -619,94 +622,6 @@
 				</p>
 			</section>
 
-			<!-- 8.12 Gallery -->
-			<section class="section container section--tint">
-				<p class="eyebrow">Our Hospital</p>
-				<h2>A Calm, Considered Environment</h2>
-				<div class="gallery reveal">
-					<div class="gallery__item gallery__item--wide">
-						<img
-							src="./assets/images/gallery-01.webp"
-							alt="Exterior view of Bhute Hospital, Akola"
-							width="1600"
-							height="800"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item">
-						<img
-							src="./assets/images/gallery-02.webp"
-							alt="Hospital reception area"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item">
-						<img
-							src="./assets/images/gallery-03.webp"
-							alt="Consultation room at Bhute Hospital"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item gallery__item--tall">
-						<img
-							src="./assets/images/gallery-04.webp"
-							alt="Operating theatre prepared for a planned procedure"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item">
-						<img
-							src="./assets/images/gallery-05.webp"
-							alt="Endoscopic spine surgery equipment"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item">
-						<img
-							src="./assets/images/gallery-06.webp"
-							alt="Dental clinic area at Bhute Hospital"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item gallery__item--wide">
-						<img
-							src="./assets/images/gallery-07.webp"
-							alt="Patient waiting area"
-							width="1600"
-							height="800"
-							loading="lazy"
-						/>
-					</div>
-					<div class="gallery__item">
-						<img
-							src="./assets/images/gallery-08.webp"
-							alt="Our doctors together in a professional setting"
-							width="1600"
-							height="1200"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-				<div class="gallery__empty" hidden>
-					A gallery of authentic hospital photography will appear here as soon
-					as it is available.
-				</div>
-				<p class="gallery__note">
-					Images shown are representative illustrations pending authentic
-					hospital photography.
-				</p>
-			</section>
-
 			<!-- 8.13 Appointment -->
 			<section class="section container" id="appointment">
 				<p class="eyebrow">Appointments</p>
@@ -864,6 +779,8 @@
 			>
 		</nav>
 
+		<script src="./data/gallery.js" defer></script>
+		<script src="./assets/js/gallery.js" defer></script>
 		<script src="./assets/js/main.js" defer></script>
 	</body>
 </html>
